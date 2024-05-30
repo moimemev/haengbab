@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행복은간장밥</title>
+    <link rel="icon" type="image/png" href="../resource/images/favicon.png">
+    <script src="../resource/js/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/sub.css">
+
+    <script src="../resource/js/script.js"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <?php include '../header.php';?>
+    <!--헤더 끝-->
+
+    <!-- 컨텐츠 -->
+    <div class="container">
+        <!-- page location -->
+        <div class="path_box">
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <img src="../resource/images/ico-home.svg" alt="홈">
+                    </a>
+                </li>
+                <li><span>고객센터</span></li>
+                <li><span>공지사항</span></li>
+            </ul>
+        </div>
+
+        <div id="con_wrap">
+            <div class="tit_box">
+                <h2>공지사항</h2>
+                <p>행복은간장밥의 새로운 소식을 확인하세요!</p>
+            </div>
+
+            <div class="board_wrap">
+                <!-- 검색창 -->
+                <div class="sch_box">
+                    <form action="">
+                        <fieldset>
+                            <legend class="hidden">검색하기</legend>
+                            <div class="inp_txt">
+                                <input type="text" placeholder="검색어를 입력하세요">
+                                <button type="button" class="btn_sch">검색</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            
+                <div class="board_list_box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">등록일</th>
+                                <th scope="col">조회수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>180</td>
+                                <td><a href="#">개인정보 처리방침 개정안내(2024년 4월)</a></td>
+                                <td>2024.04.22</td>
+                                <td>895</td>
+                            </tr>       
+                            <tr>
+                                <td>179</td>
+                                <td><a href="#">설날 운영매장 안내</a></td>
+                                <td>2024.02.14</td>
+                                <td>3476</td>
+                            </tr>
+                            <tr>
+                                <td>178</td>
+                                <td><a href="#">초록우산 어린이재단과 사회공헌 협약식 체결</a></td>
+                                <td>2024.01.25</td>
+                                <td>592</td>
+                            </tr>
+                                                                             
+                            <tr>
+                                <td>177</td>
+                                <td><a href="#">개인정보 처리방침 개정안내(2024년 1월)</a></td>
+                                <td>2024.01.01</td>
+                                <td>189</td>
+                            </tr>
+                            <tr>
+                                <td>176</td>
+                                <td><a href="#">[SNS 이벤트] 신제품 출시 기념! 선착순 댓글 이벤트 당첨자 발표</a></td>
+                                <td>2023.12.11</td>
+                                <td>1926</td>
+                            </tr>
+                            <tr>
+                                <td>175</td>
+                                <td><a href="#">SKT T-day 프로모션 참여 매장 안내</a></td>
+                                <td>2023.09.01 </td>
+                                <td>9989</td>
+                            </tr>
+                            <tr>
+                                <td>174</td>
+                                <td><a href="#">개인정보 처리방침 개정안내(2023년 8월)</a></td>
+                                <td>2023.08.30</td>
+                                <td>7859</td>
+                            </tr>
+                            <tr>
+                                <td>173</td>
+                                <td><a href="#">[이벤트] 우리 동네 행복은간장밥 칭찬하기 당첨자 발표</a></td>
+                                <td>2023.08.23</td>
+                                <td>1949</td>
+                            </tr>
+                            <tr>
+                                <td>172</td>
+                                <td><a href="#">행복은간장밥 원산지 표시판 안내(2023.04)</a></td>
+                                <td>2023.04.11</td>
+                                <td>1554</td>
+                            </tr>
+                            <tr>
+                                <td>171</td>
+                                <td><a href="#">개인정보 처리방침 개정안내(2023년 2월)</a></td>
+                                <td>2023.02.10</td>
+                                <td>1243</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <div class="paging">
+                    <ul class="pagination">
+                        <li><a href="#" class="prev page_btn">이전 페이지</a></li>
+                        <li><span class="active">1</span></li>
+                        <li><span>2</span></li>
+                        <li><span>3</span></li>
+                        <li><span>4</span></li>
+                        <li><a href="#" class="next page_btn">다음 페이지</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <?php include '../footer.php';?>
+    <!--푸터 끝-->
+
+</body>
+</html>

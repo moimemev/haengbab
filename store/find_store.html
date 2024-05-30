@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행복은간장밥</title>
+    <link rel="icon" type="image/png" href="../resource/images/favicon.png">
+    <script src="../resource/js/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/sub.css">
+
+    <script src="../resource/js/script.js"></script>
+
+    <!-- daum map -->
+    <script class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>   
+    
+</head>
+<body>
+    <!-- 헤더 -->
+    <?php include '../header.php';?>
+    <!--헤더 끝-->
+
+    <!-- 컨텐츠 -->
+    <div class="container">
+        <!-- page location -->
+        <div class="path_box">
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <img src="../resource/images/ico-home.svg" alt="홈">
+                    </a>
+                </li>
+                <li><span>매장</span></li>
+                <li><span>매장찾기</span></li>
+            </ul>
+        </div>
+        <div id="con_wrap">
+            <div class="tit_box">
+                <h2>매장찾기</h2>
+                <p>행복은간장밥 매장을 검색하실 수 있습니다.</p>
+            </div>
+
+            <div class="store_wrap">
+                <!-- 폼태그 시작 -->
+               <form action="">
+                    <fieldset>
+                        <legend>검색하기</legend>                    
+                        <div class="store_sch">
+                            <div class="select_box">
+                                <div class="select_btn">
+                                    <span>검색으로 찾기</span>
+                                    <i>아이콘</i>
+                                </div>
+                                <ul class="option_lst">
+                                    <li>옵션1</li>
+                                    <li>옵션2</li>
+                                </ul>
+                            </div>
+
+                            <div class="sch_box">
+                                <p class="inp_txt">
+                                    <input type="text" placeholder="지역 또는 매장명을 입력해 주세요">
+                                    <button type="button" class="btn_sch">검색</button>                    
+                                </p>
+                            </div>
+                        </div>
+        
+                    </fieldset>
+               </form> 
+               <!-- 폼태그 끝 -->
+                
+                <div class="store_box">
+                    <div class="map">
+                        <div class="api">
+                            <div id="daumRoughmapContainer1714831599377" class="root_daum_roughmap root_daum_roughmap_landing map1"></div>
+                        </div>
+                        <div class="api">
+                            <div id="daumRoughmapContainer1714831676625" class="root_daum_roughmap root_daum_roughmap_landing map2"></div>
+                        </div>
+                        <div class="api">
+                            <div id="daumRoughmapContainer1714831737613" class="root_daum_roughmap root_daum_roughmap_landing map3"></div>
+                        </div> 
+                    </div>
+                    <div class="lst">
+                        <ul>
+                            <li data-link="map1">
+                                <p><strong>아주대점</strong></p>
+                                <div class="info">
+                                    <span>경기도 수원시 팔달구 아주로 49</span>
+                                    <span class="tel">010-2380-0935</span>                                    
+                                    <span class="time">영업시간 : 09:00 ~ 23:00</span>                                    
+                                </div>                            
+                            </li>
+                            <li data-link="map2">
+                                <p><strong>건국대점</strong></p>
+                                <div class="info">
+                                    <span>서울특별시 광진구 동일로20길 106</span>
+                                    <span class="tel">02-3409-3772</span>                                    
+                                    <span class="time">영업시간 : 09:00 ~ 23:00</span>                                    
+                                </div>                            
+                            </li>
+                            <li data-link="map3">
+                                </p><strong>충무로점</strong></p>
+                                <div class="info">
+                                    <span>서울특별시 중구 퇴계로 196 LG정유</span>
+                                    <span class="tel">02-2275-0935</span>                                    
+                                    <span class="time">영업시간 : 09:00 ~ 23:00</span>                                    
+                                </div>                            
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <!-- 푸터 -->
+    <?php include '../footer.php';?>
+    <!--푸터 끝-->
+
+    <script>
+        $('.store_box .lst ul li').click(function(){
+            let link = $(this).attr('data-link');
+            $('.store_box .map .api').hide();
+            $('.'+link).parent().show();
+        })
+    </script>
+    <script>
+        new daum.roughmap.Lander({
+            "timestamp" : "1714831599377",
+		    "key" : "2j8wg",
+            "mapWidth" : "750",
+            "mapHeight" : "450"
+        }).render();
+
+        new daum.roughmap.Lander({
+		"timestamp" : "1714831676625",
+		"key" : "2j8wh",
+		"mapWidth" : "750",
+		"mapHeight" : "450"
+	    }).render();
+
+        new daum.roughmap.Lander({
+		"timestamp" : "1714831737613",
+		"key" : "2j8wi",
+		"mapWidth" : "750",
+		"mapHeight" : "450"
+    	}).render();
+    </script>
+</body>
+</html>

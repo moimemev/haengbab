@@ -1,0 +1,41 @@
+:root{
+    /* color */
+    --point-color: #F9D61F; 
+    --blue-color:#3CC0FD;
+    --main-color:#FFEB89;
+    --main-brown-color:#3F3431;
+    --main-text-color:#000;
+    
+    --brown1-color:#3F3431;
+    --brown2-color:#AB9067;
+
+    --yellow3-color:#FBF7EB;
+    --orange0-color:#FFEDBC;
+    --orange-color:#FF9200;
+    --orange2-color:#F24E1E;    
+
+    --gray1-color:#F2F2F2;
+    --gray2-color:#DFDFDF;
+    --gray3-color:#C3CFD9;
+    --gray4-color:#909090;
+    --gray5-color:#8B8B8B;
+    --gray6-color:#6C6B6B;
+    --gray7-color:#1C1C1C;
+
+    --input-color:#1C1C1C;
+    --placeholder-color:#8B8B8B;
+    --error-color:#F24E1E;
+        
+    /* size */
+    --inner-width:1530px;
+    --full-width:1900px;
+    --header-height:90px;
+    --title-bottom:16px;
+    --section-top-margin:80px;
+    --sec1-slide-width:650px;
+    --sec1-slide-height:405px;
+    
+    /* font */
+    --main-font-name:'SCoreDream';
+    --main-title-size:45px;
+}

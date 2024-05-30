@@ -1,0 +1,467 @@
+/* ====================================================
+서브페이지 공통
+====================================================*/
+.clear::after{content: ""; display: block; clear: both;}
+
+/* 상단 타이틀 */
+#con_wrap{padding: var(--section-top-margin) 0;}
+#con_wrap .tit_box{text-align: center;}
+#con_wrap .tit_box h2{font-size: var(--main-title-size);}
+#con_wrap .tit_box p{font-size: 20px; font-weight: 300;  margin-top: var(--title-bottom);}
+
+/* 탭메뉴 */
+#tab_menu{margin-top: 130px; display: inline-block;}
+#tab_menu li{float: left; }
+#tab_menu li + li{margin-left:5px;}
+#tab_menu li a{
+    display: block; 
+    padding:20px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+/* 활성 탭 */
+#tab_menu li.active a::after{
+    content:"";
+    position: absolute;
+    left:50%;
+    bottom:10px;
+    width:60%;
+    height:5px;
+    transform:translateX(-50%);
+    background-color: var(--orange-color);
+}
+
+#tab_menu li.active a{
+    color:var(--orange-color);
+}
+
+/* ====================================================
+1. 브랜드 페이지
+====================================================*/
+.story_box{text-align: center;}
+.story_box .story_wrap{margin-top: 80px; text-align: center;}
+.story_box #story_brand{    
+    display: flex; justify-content: center; align-items: center; flex-direction:column; 
+    padding-top: 60px;
+}
+
+.story_box #story_brand .brand_info{
+    display: flex; justify-content: space-between; align-items: center;
+    width: 900px;  
+}
+
+.story_box #story_brand .brand_info .txt_box p{text-align: left; font-size: 20px;}
+.story_box #story_brand .brand_info .txt_box strong{font-size: 40px;}
+.story_box #story_brand .brand_info .txt_box .txt{margin-top:16px;}
+.story_box #story_brand .exterior{
+    width: var(--full-width);
+    background: var(--main-color);
+    padding:80px 0;
+    margin-top: 200px;
+}
+
+.story_box #story_brand .exterior .txt_box{display: inline-block; margin-top:80px; margin: 0 auto; text-align: left; }
+.story_box #story_brand .exterior .txt_box p strong{display: block; text-align: center; font-size: var(--main-title-size);}
+.story_box #story_brand .exterior .txt_box .txt_con{margin-top: 60px;}
+.story_box #story_brand .exterior .txt_box p + p {margin-top: 25px;}
+.story_box #story_brand .exterior .txt_box p span{
+    display: inline-block; width:125px; padding:5px 10px;
+    background: var(--main-brown-color); color:white; border-radius: 20px; 
+    margin-right: 20px;
+    text-align: center;
+}
+.story_box #story_brand .exterior .img_box{margin-top:80px;}
+.story_box #story_brand .exterior .img_box img{border-radius: 20px;}
+.story_box #story_brand .exterior .img_box img:nth-child(2){
+    margin-left:30px;
+    margin-top: 270px;
+}
+
+.story_box #story_bi{display: inline-block; padding-top: 60px; width: 1270px; }
+.story_box #story_bi .m_title{text-align: left; font-weight: 600; font-size: 26px; margin-bottom:25px;}
+.story_box #story_bi .logo_box .desc{font-size: 20px; margin-top:35px;}
+.story_box #story_bi .list{overflow: hidden;}
+.story_box #story_bi .list li{float: left; margin-top: 150px;}
+.story_box #story_bi .list li + li{margin-left: 35px;}
+.story_box #story_bi .list li .img_box{
+    border: 1px solid var(--gray4-color); border-radius:16px; padding:44px 78px; 
+}
+
+.story_box #story_bi .symbol{margin-top: 120px; text-align: left;}
+.story_box #story_bi .logo_set{margin-top: 120px; text-align: left; overflow: hidden;}
+.story_box #story_bi .logo_set .logo{float: left;}
+.story_box #story_bi .logo_set .logo + .logo{margin-left: 180px;}
+.story_box #story_bi .logo_set .title{font-size: 20px; margin-bottom: 10px;}
+
+.story_box #story_bi .color_set{margin-top: 120px; overflow: hidden;}
+.story_box #story_bi .color_set .color{float: left;}
+.story_box #story_bi .color_set .color + .color{margin-left:30px;}
+.story_box #story_bi .color_set .color .color_box{display: block; width: 230px; height:200px; border-radius: 16px;}
+.story_box #story_bi .color_set .color:nth-of-type(1) .color_box{background:#AB9067;}
+.story_box #story_bi .color_set .color:nth-of-type(2) .color_box{background:#3E352F;}
+.story_box #story_bi .color_set .color p{margin-top:16px; text-align: left;}
+
+.story_box #story_bi .font_set{margin-top: 120px; }
+.story_box #story_bi .font_set ul{text-align: left;}
+.story_box #story_bi .font_set ul li{margin-top: 60px; font-size: 30px;}
+.story_box #story_bi .font_set ul li span{display: inline-block; width:230px;vertical-align: top;}
+.story_box #story_bi .font_set ul li .txt{display: inline-block; width:940px; margin-left: 50px; text-align: left; }
+
+.story_box #story_bi .font_set ul li:nth-child(1){
+    font-family: "Noto Serif KR", serif;
+}
+
+.story_box #story_bi .font_set ul li:nth-child(2){
+    font-family: "Nanum Myeongjo", serif;
+}
+
+/* ====================================================
+2. 메뉴 - 목록 페이지
+====================================================*/
+.menu_list_box{text-align: center;}
+.menu_list_box .list_wrap{margin-top: 135px; width:1170px; margin: 0 auto; }
+
+#list3{margin-top: 135px; margin-left: -29px;}
+#list3 li{float: left; width:370px; margin-left: 29px;}
+#list3 li:nth-child(n+4){margin-top: 30px;} /* 4번째 부터 모두 */
+#list3 li a{display: block;  position: relative; overflow: hidden;}
+#list3 li a .prod_img{
+    height:320px; 
+    background: var(--main-color); border-radius: 150px 150px 100px 0; 
+    position: relative;   
+}
+#list3 li a .prod_img img{position: absolute;  left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+
+    /* 0.6초 대기했다가 0.3초간 재생하겠다 */
+    transition:top 0.3s ease-in 0.2s; 
+}
+
+#list3 li:hover a .prod_img img{position: absolute;  left:50%;
+    top:80%;
+}
+
+#list3 li .prod_name{font-size: 20px; font-weight: 600; margin-top: 20px;}
+
+#list3 li a .over_box{
+    width: 370px;
+    height:320px;
+    background:rgba(255,102,55,0.9);
+    position: absolute;
+    border-radius: 150px 150px 100px 0; 
+    left: 0;
+    top: 320px;
+    opacity:0;
+    z-index:10;
+    transition:top 0.2s ease-in,
+        opacity 0.3s ease-out;     
+}
+
+#list3 li:hover a .over_box{
+    top:0;
+    opacity:1;
+}
+#list3 li a .over_box .txt_box{
+    position: absolute;
+    left: 50%; top:50%; 
+    width:262px;
+    transform:translate(-50%,-50%); 
+    color:white;    
+}
+
+#list3 li a .over_box .txt_box .tit{font-size: 20px; font-weight: 600;}
+#list3 li a .over_box .txt_box .prod_desc{margin-top: 10px;}
+#list3 li a .over_box .txt_box .ico_box{
+    display: inline-block;
+    margin-top: 32px; 
+    width: 48px; height: 48px;
+    text-indent: -9999px;
+    background: var(--point-color) url(../images/ico-glass.svg) no-repeat center center;
+    border-radius: 50%;
+    box-shadow:4px 4px 8px rgba(0,0,0,0.25);
+}
+
+#list3 li.active a .prod_img img{
+    bottom:0;
+}
+
+/* ====================================================
+2. 메뉴 - 상세 페이지
+====================================================*/
+.menu_view_box{width: 1270px; margin: 130px auto; }
+
+.menu_view_box .prod_wrap{
+    display: flex; align-items: flex-end; justify-content: space-between;
+}
+
+.menu_view_box .prod_img{
+    width: 480px; height:480px;
+    background: var(--main-color);
+    border-radius:240px 240px 0 0 ;
+    position: relative;
+}
+
+.menu_view_box .prod_img img{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.menu_view_box .prod_info{
+    width: 680px; 
+}
+.menu_view_box .prod_info .eng_name{font-size: 24px;}
+.menu_view_box .prod_info .kor_name{font-size: 40px;}
+.menu_view_box .prod_info .txt{font-size: 20px; margin-top: 33px;}
+.menu_view_box .prod_info .price{font-size: 24px; font-weight: bold; margin-top: 10px;}
+
+.menu_view_box .prod_detail{text-align: center; margin-top: 250px;}
+.menu_view_box .prod_detail .txt_box{}
+.menu_view_box .prod_detail .txt_box p{margin-top: 82px; font-size: 20px;}
+.menu_view_box .prod_detail .txt_box p.title{margin-top: 52px;}
+.menu_view_box .prod_detail .txt_box strong{font-size: 40px;}
+.menu_view_box .prod_detail .detail_img img{
+    width: 480px; height:480px;
+}
+
+.nutrient{width:1260px; margin: 30px auto 0 auto; text-align: center;}
+.nutrient h2{text-align: center; margin-bottom: 20px;}
+.nutrient table{
+    border-top:3px solid #000; text-align: center; 
+    width:100%;
+}
+
+/* padding이나 height로 높이 지정하기 */
+.nutrient table th{
+    border-bottom:1px solid #000; font-size: 18px; font-weight: 500; 
+    padding:20px 0;
+}
+.nutrient table td{border-bottom:1px solid #000;}
+
+/* ====================================================
+3. 매장 - 매장찾기
+====================================================*/
+.store_wrap{width: 1270px; margin:60px auto;}
+.store_wrap .store_sch{
+    width: 755px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+}
+.store_wrap .store_sch .select_box{position: relative; width: 200px; height:100px;}
+
+/* 검색으로 찾기 버튼  */
+.store_wrap .store_sch .select_box .select_btn{
+    display: flex; justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: var(--orange-color);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.store_wrap .store_sch .select_box .select_btn span{
+   font-size: 18px; color:#fff;
+}
+
+/* 화살표 이미지 */
+.store_wrap .store_sch .select_box .select_btn i{
+    display: inline-block; width: 24px; height: 24px; 
+    background: url(../images/ico-dropdown-arrow_w.svg) no-repeat;
+    text-indent:-9999px;
+}
+
+/* 옵션 리스트 (기본-숨김)  */
+.store_wrap .store_sch .select_box .option_lst{
+    position: absolute;
+    left: 0; top:58px;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid var(--orange-color);
+    background: var(--orange0-color);
+    cursor: pointer;
+    display: none;
+}
+
+/* 옵션 리스트 (보이기 설정)  */
+.store_wrap .store_sch .select_box.on .option_lst{display: block}
+.store_wrap .store_sch .select_box .option_lst li{padding: 12px 20px;}
+.store_wrap .store_sch .select_box .option_lst li:hover{background: var(--orange-color); color:#fff;}
+
+/* 검색창 */
+.store_wrap .sch_box .inp_txt{position: relative;}
+.store_wrap .sch_box .inp_txt input[type=text]{    
+    width:520px; height:48px; 
+    background: var(--gray1-color); 
+    font-family:'SCoreDream'; font-size: 20px;
+    padding:12px 45px 12px 20px; box-sizing: border-box;
+    border-radius: 8px;
+    outline:none;
+    border:none;
+}
+
+.store_wrap .sch_box .btn_sch{
+    position: absolute; top:50%; right:20px; transform:translateY(-50%);
+    width:24px; height:24px; 
+    background:url('../images/ico-notice-search.svg') no-repeat;
+    background-size:24px auto;
+    text-indent:-9999px; 
+}
+
+.store_wrap .store_box{
+    display: flex; justify-content: space-between; margin-top: 80px;
+}
+
+/* 지도 */
+.store_wrap .store_box .map{width: 750px; background: lightgray; position: relative;}
+.store_wrap .store_box .map .api{position: absolute; left:0; top:0;}
+
+/* 매장리스트 */
+.store_wrap .store_box .lst{width: 490px;}
+.store_wrap .store_box .lst ul{}
+.store_wrap .store_box .lst ul li{padding-bottom: 20px; border-bottom:1px solid #000; cursor: pointer;}
+.store_wrap .store_box .lst ul li:nth-child(n+2){margin-top: 20px; }
+.store_wrap .store_box .lst ul li p{margin-bottom: 10px;}
+.store_wrap .store_box .lst ul li strong{font-size: 18px; font-weight: 600; border-bottom: 1px dotted #000;}
+.store_wrap .store_box .lst ul li .info{font-size: 18px; font-weight: 500;}
+.store_wrap .store_box .lst ul li .info span{display: block;}
+.store_wrap .store_box .lst ul li .info span:nth-child(n+2){display: block; margin-top: 5px;}
+.store_wrap .store_box .lst ul li .info span.tel{font-size: 16px;}
+.store_wrap .store_box .lst ul li .info span.time{font-size: 16px;}
+
+/* ====================================================
+4. 프랜차이즈 - faq
+====================================================*/
+/* faq */
+.faq-box{width: 1060px; margin:80px auto 0 auto;}
+.faq-box ul{border-top:5px solid var(--point-color);}
+.faq-box ul li{border-bottom: 1px solid var(--gray4-color);}
+.faq-box ul li dl{background: #fff; padding:0 40px;}
+.faq-box ul li.active dl{background: var(--gray1-color);}
+
+/* Q아이콘, 질문, after 아이콘 3개 배치하기 위해 flex 지정 */
+.faq-box ul li dl dt{
+    position: relative; display: flex; justify-content: space-between;  align-items: center;
+    cursor: pointer;
+}
+
+.faq-box ul li dl dt:after{
+    content:"";
+    /* position: absolute;
+    right:0;
+    top:0; */
+    width: 32px;
+    height:32px;
+    background: url(../images/ico-plus.svg) no-repeat;
+    transition:all 0.3s ease-out;
+}
+
+.faq-box ul li.active dl dt:after{
+    transform:rotate(45deg) translateX(-5px) scale(1.1);
+}
+
+.faq-box ul li dl dt .q_ico{
+    display: inline-block;    
+    width: 32px;
+    height: 32px;
+    background: var(--brown2-color);
+    border-radius: 50%;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color:#fff;
+    text-align: center;
+    line-height: 32px;
+}
+
+.faq-box ul li dl dt strong{
+    display: inline-block;    
+    width:calc(100% - 124px);    /* 124=아이콘2개+사이간격 */
+    padding:20px 0;    
+}
+
+/* active상태일때만 밑줄표시 */
+.faq-box ul li.active dl dt strong{border-bottom: 1px solid var(--gray4-color);}
+
+.faq-box ul li dl dd{
+    visibility: hidden; height: 0; overflow: hidden;   
+}
+
+.faq-box ul li.active dl dd{
+    visibility: visible; height:auto; overflow: visible;
+}
+
+.faq-box ul li dl dd .wrap{
+    display: flex; justify-content: space-between; padding:40px 0;   
+}
+
+.faq-box ul li dl dd .answer_ico{
+    display: inline-block;    
+    width: 32px;
+    height: 32px;
+    background: var(--point-color);
+    border-radius: 50%;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color:#fff;
+    text-align: center;
+    line-height: 32px;
+}
+
+.faq-box ul li dl dd .answer_box{
+    display: inline-block;    
+    width:calc(100% - 62px);
+    margin-left: 32px;    
+    word-break:break-all;
+}
+
+/* ====================================================
+5. 고객센터-공지사항
+====================================================*/
+.board_wrap{width: 1270px; margin: 60px auto 0 auto;}
+.board_wrap .sch_box{display: flex; justify-content: flex-end;}
+.board_wrap .sch_box .inp_txt{position: relative;}
+.board_wrap .sch_box .inp_txt input[type=text]{    
+    width:320px; height:48px; 
+    background: var(--gray1-color); 
+    font-family:'SCoreDream'; font-size: 20px;
+    padding:12px 45px 12px 20px; box-sizing: border-box;
+    border-radius: 8px;
+    outline:none;
+    border:none;
+}
+
+/* 검색버튼 */
+.board_wrap .sch_box .btn_sch{
+    position: absolute; top:50%; right:20px; transform:translateY(-50%);
+    width:24px; height:24px; 
+    background:url('../images/ico-notice-search.svg') no-repeat;
+    background-size:24px auto;
+    text-indent:-9999px; 
+}
+
+.board_wrap .board_list_box{}
+.board_wrap .board_list_box table{width: 100%; border-top:3px solid #000; margin-top: 41px;}
+.board_wrap .board_list_box table tbody tr:hover{background: var(--point-color);}
+.board_wrap .board_list_box table th, td{border-bottom:1px solid var(--gray5-color);}
+.board_wrap .board_list_box table th{font-size: 18px; font-weight: 500; padding:30px 0;}
+.board_wrap .board_list_box table td{text-align: center; padding:20px 0;}
+.board_wrap .board_list_box table td a{display: block; }
+.board_wrap .board_list_box table td:nth-child(2){text-align: left;}
+
+.board_wrap .paging{text-align: center;margin-top: 80px;}
+.board_wrap .paging .pagination{display: inline-block; }
+.board_wrap .paging .pagination li{float: left; margin-left: 20px;}
+.board_wrap .paging .pagination li:first-child{float: left; margin-right:0}
+.board_wrap .paging .pagination .page_btn{
+    display: inline-block; text-indent: -9999px; width:24px; height:24px;    
+}
+
+.board_wrap .paging .pagination .prev{background: url(../images/ico-arrow-left.svg) no-repeat;}
+.board_wrap .paging .pagination .next{background: url(../images/ico-arrow-right.svg) no-repeat;}
+.board_wrap .paging .pagination span{cursor: pointer; display: block; width: 24px; height: 24px; border: 00px solid #000;}
+.board_wrap .paging .pagination span.active{color:var(--point-color); font-weight: 600;}

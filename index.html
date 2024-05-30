@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행복은간장밥</title>
+    <link rel="icon" type="image/png" href="resource/images/favicon.png">
+    
+    <script src="resource/js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="resource/css/common.css">
+    <link rel="stylesheet" href="resource/css/main.css">
+    <script src="resource/js/main.js"></script>
+</head>
+<body>
+    <!-- 헤더 -->   
+    <?php include 'header.php';?>
+    <header id="header">                
+        <div class="header_inner">
+            <h1 class="logo">
+                <a href="#"><img src="resource/images/logo.png" alt="행복은간장밥"></a>
+            </h1>
+            <nav>
+                <ul id="gnb">
+                    <li>
+                        <a href="brand/story.html" class="depth1">브랜드</a>
+                        <ul class="depth2">
+                            <li><a href="brand/story.html">브랜드 스토리</a></li>
+                            <li><a href="brand/story.html">홍보센터</a></li>
+                        </ul>
+                    </li>
+                    <li class="off">
+                        <a href="menu/rice_list.html" class="depth1">메뉴</a>
+                        <ul class="depth2">
+                            <li><a href="menu/rice_list.html">세트 메뉴</a></li>
+                            <li><a href="menu/rice_list.html">스페셜 메뉴</a></li>
+                            <li><a href="menu/rice_list.html">밥류</a></li>
+                            <li><a href="menu/rice_list.html">면류</a></li>
+                            <li><a href="menu/rice_list.html">샐러드</a></li>
+                            <li><a href="menu/rice_list.html">사이드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="store/find_store.html" class="depth1">매장</a>
+                        <ul class="depth2">
+                            <li><a href="store/find_store.html">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="franchise/faq.html" class="depth1">창업</a>
+                        <ul class="depth2">
+                            <li><a href="franchise/faq.html">성공전략</a></li>
+                            <li><a href="franchise/faq.html">창업안내</a></li>
+                            <li><a href="franchise/faq.html">FAQ</a></li>
+                            <li><a href="franchise/faq.html">가맹상담</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="board/notice_list.html" class="depth1">고객센터</a>
+                        <ul class="depth2">
+                            <li><a href="board/notice_list.html">공지사항</a></li>
+                            <li><a href="board/notice_list.html">고객의 소리</a></li>
+                        </ul></li>
+                </ul>
+            </nav>     
+            <div class="util">
+                <a href="member/login.html">로그인</a>
+                <a href="member/join_step1.html">회원가입</a>
+            </div>      
+        </div>       
+        <div class="gnb_bg"></div> 
+    </header> 
+    <!-- 스와이퍼 슬라이드 시작 -->
+    <div class="swiper mainSlide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="resource/images/slide1.png" alt="슬라이드 이미지">
+                <img src="resource/images/slide1-icon1.png" class="bg_object obj1" alt="새우">
+                <img src="resource/images/slide1-icon2.png" class="bg_object obj2" alt="물결">
+                <img src="resource/images/slide1-icon3.png" class="bg_object obj3" alt="물고기">
+                <img src="resource/images/slide1-icon3.png" class="bg_object obj4" alt="물고기">
+            </div>
+            <div class="swiper-slide">
+                <img src="resource/images/slide1.png" alt="슬라이드 이미지">
+            </div>
+            <div class="swiper-slide">
+                <img src="resource/images/slide1.png" alt="슬라이드 이미지">
+            </div>
+            ...
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <!-- 스와이퍼 슬라이드 끝 -->
+
+    <!-- 컨텐츠 -->
+    <div id="container">
+        <!--메뉴-->
+        <section id="sec_menu">
+            <div class="inner">
+                <div class="sec-tit">
+                    <h2>Menu</h2>
+                    <p>정성 가득한 행복은간장밥의 다양하고 맛있는 행복을 느껴보세요</p>
+                </div>
+                <ul class="list">
+                    <li>
+                        <div class="img_wrap">
+                            <div class="img_box">스페셜</div>                            
+                        </div>
+                        <div class="txt_box">
+                            <p class="kor">스페셜</p>
+                            <p class="eng">Special</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="menu/rice_list.html">
+                            <div class="img_wrap">
+                                <div class="img_box">밥류</div>                            
+                            </div>
+                            <div class="txt_box">
+                                <p class="kor">밥류</p>
+                                <p class="eng">Rice</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="img_box">면류</div>                            
+                        </div>
+                        <div class="txt_box">
+                            <p class="kor">면류</p>
+                            <p class="eng">Noodle</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="img_box">샐러드</div>                            
+                        </div>
+                        <div class="txt_box">
+                            <p class="kor">샐러드</p>
+                            <p class="eng">Salad</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="img_box">곁들임 메뉴</div>                            
+                        </div>
+                        <div class="txt_box">
+                            <p class="kor">곁들임</p>
+                            <p class="eng">Side</p>
+                        </div>
+                    </li>
+                </ul>
+                <img src="resource/images/menu-logo.png" alt="행복은간장밥">
+            </div>
+        </section>
+
+        <!-- 사진이 inner바깥영역까지 차지하므로 inner에 넣지 말기 -->
+        <section id="sec1">
+            <div class="cont_wrap">
+                <h2>브랜드 스토리</h2>
+                <div class="box_wrap">
+                    <div class="img_box_left"></div>
+                    <div class="box_inner">
+                        <div class="swiper sec1Slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_box">
+                                        <p class="tit">
+                                            <strong>간장소스 기반의<br>캐주얼 한식 브랜드</strong>
+                                        </p>
+                                        <p class="cont">
+                                            행복은간장밥은<br>빠르고 간편하면서도<br>건강한 음식을 제공합니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="txt_box">
+                                        <p class="tit">
+                                            <strong>혼밥하기 좋은<br>캐주얼 한식 브랜드</strong>
+                                        </p>
+                                        <p class="cont">
+                                            따뜻한 마음과 정성이<br>듬뿍 담긴 한끼 식사!<br>
+                                            정성 가득한 마음으로 언제나 함께 하겠습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="img_box_right"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec2">
+            <div class="container-inner">           
+                <div class="sec-tit">
+                    <h2>Best Menu</h2>
+                    <p>행복은간장밥의 모든 재료는 정성을 다해 좋은 재료로만 담았습니다.</p>
+                </div>
+                <div class="menu_wrap">
+                    <div class="swiper menuSlide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="menu">
+                                    <div class="img-box">
+                                        <img src="resource/images/menu-thumb1.png" alt="제품이미지">
+                                    </div>
+                                    <div class="con-box">
+                                        <p class="name">간장 연어 덮밥</p>
+                                        <p class="desc">특별한 간장 소스에 절인<br>
+                                            부드러우면서 탄력있는 간장 연어의 식감이 일품</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu">
+                                    <div class="img-box">
+                                        <img src="resource/images/menu-thumb2.png" alt="제품이미지">
+                                    </div>
+                                    <div class="con-box">
+                                        <p class="name">간장 새우 덮밥</p>
+                                        <p class="desc">특별한 간장 소스에 절인<br>
+                                            쫀득한 간장 새우의 깊은 감칠맛</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu">
+                                    <div class="img-box">
+                                        <img src="resource/images/menu-thumb3.png" alt="제품이미지">
+                                    </div>
+                                    <div class="con-box">
+                                        <p class="name">콜라겐 덮밥</p>
+                                        <p class="desc">피쉬 콜라겐을 듬뿍 품은 연어와 족발이 만나<br>
+                                            피부보습, 탄력 및 주름개선에 효과적인 메뉴</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu">
+                                    <div class="img-box">
+                                        <img src="resource/images/menu-thumb1.png" alt="제품이미지">
+                                    </div>
+                                    <div class="con-box">
+                                        <p class="name">간장 연어 덮밥</p>
+                                        <p class="desc">특별한 간장 소스에 절인<br>
+                                            부드러우면서 탄력있는 간장 연어의 식감이 일품</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu">
+                                    <div class="img-box">
+                                        <img src="resource/images/menu-thumb2.png" alt="제품이미지">
+                                    </div>
+                                    <div class="con-box">
+                                        <p class="name">간장 새우 덮밥</p>
+                                        <p class="desc">특별한 간장 소스에 절인<br>
+                                            쫀득한 간장 새우의 깊은 감칠맛</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu">
+                                    <div class="img-box">
+                                        <img src="resource/images/menu-thumb3.png" alt="제품이미지">
+                                    </div>
+                                    <div class="con-box">
+                                        <p class="name">간장 연새 덮밥</p>
+                                        <p class="desc">간장 연어와 간장 새우를 함께 즐길 수 있는<br>
+                                            대표 덮밥 메뉴</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>      
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <div id="sec3">
+            <!-- 매장찾기 -->
+            <div class="content_top">
+                <div class="cont_left">
+                    <div class="find_store">
+                        <p>
+                            행복은간장밥<br>
+                            <strong>
+                                매장,<br>
+                                어디있죠!?
+                            </strong>
+                        </p>
+                        
+                        <div class="input_wrap">
+                            <input type="text" placeholder="가까운 지역명을 검색하세요">
+                            <button type="button" class="btn_search" onclick="location.href='store/find_store.html'">검색</button>
+                        </div>
+                    </div>
+                </div>               
+                
+                <div class="cont_right">
+                    <a href="franchise/faq.html">
+                        <div class="franchise">                           
+                            <strong>프랜차이즈</strong>
+                            <p>행복은간장밥<br>창업안내를 도와드리겠습니다.</p>                        
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="banner">
+                    <img src="resource/images/banner.png" alt="배너이미지">
+                </div> -->
+            </div>                
+            <!-- 새소식 -->
+            <div class="content_bottom">
+                <div class="container-inner">
+                    <div class="news_wrap">
+                        <div class="news_tit">
+                            <strong class="tit">새소식</strong>
+                            <p class="txt">행복은간장밥의 다양한 소식을<br>
+                                빠르게 전달해드립니다.</p>
+                            <a href="board/notice_list.html" class="btn_more">자세히보기</a>
+                        </div>
+                        <ul class="news_list">
+                            <li><a href="#">개인정보 처리방침 개정안내</a></li>
+                            <li><a href="#">4월 배달앱 할인 프로모션</a></li>
+                            <li><a href="#">행복은간장밥 고객 프로모션 감사 이벤트 진행 안내</a></li>
+                        </ul>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+        
+        <section id="sec4">
+            <div class="container-inner">
+                <h2>지금 이순간 <strong>#행복은간장밥</strong></h2>
+                <ul class="list">
+                    <li><a href="#"><img src="resource/images/sec3-img1.png" alt=""></a></li>
+                    <li><a href="#"><img src="resource/images/sec3-img2.png" alt=""></a></li>
+                    <li><a href="#"><img src="resource/images/sec3-img3.png" alt=""></a></li>
+                    <li><a href="#"><img src="resource/images/sec3-img4.png" alt=""></a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- 푸터 -->
+    <?php include 'footer.php';?>
+    <!--푸터 끝-->
+
+    <!-- 퀵 메뉴 -->
+    <div class="franchise_info">
+        <em>성공창업문의</em>
+        <i></i>
+        <strong>02-2275-0935</strong>
+    </div>
+</body>
+</html>

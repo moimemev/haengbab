@@ -1,0 +1,278 @@
+@charset 'utf-8'; 
+/* 한글 안깨지게 */
+
+/* 초기화, 공통, 메인페이지 스타일 */
+@import url('https://webfontworld.github.io/score/SCoreDream.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+@import "default.css";   
+
+*{
+    box-sizing: border-box;
+}
+
+/* 폰트 */
+body{
+    font-family: 'SCoreDream';
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color:#000;
+}
+
+/* 초기화 */
+body,h1,h2,h3,h4,h5,h6,ol,ul,li,dl,dt,dd,table,th,td,p,fieldset{margin: 0; padding: 0;}
+
+/* 낮은 사양의 브라우저에서 블럭으로 안보이는 현상 해결 */
+header, nav, section, article, aside, footer{display: block;}
+
+a{text-decoration: none; color:#000;}
+ul{list-style: none;}
+img{vertical-align: top;}
+em{font-style:normal;}
+address{font-style:normal;}
+button{border:none; outline:none; background: transparent; cursor: pointer;}
+
+/* 폼요소 */
+fieldset{border:0;}
+legend, caption{position:absolute; left:-9999px;}
+input{ font-family: 'SCoreDream'; box-sizing: border-box;}
+
+/* 테이블 */
+table{text-align: center; border-collapse:collapse;}
+
+/**************************************************************************** 
+공통
+*****************************************************************************/
+/* 요소 크기도 없고 안보이게 처리 hidden, hide, screen-out*/
+.hidden{position:absolute; left:-9999px;}
+.container{max-width: 1530px; margin: 127px auto 0 auto; }
+
+/* 로케이션-breadcrumb */
+.path_box{
+    height:80px; padding-top:28px; box-sizing: border-box; 
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+}
+.path_box ul {overflow: hidden;}
+.path_box ul li{float: left;}
+.path_box ul li a{display: block;}
+.path_box ul li +li::before{
+    content:"";
+    display: inline-block;
+    vertical-align: top;
+    width:24px;
+    height:24px;
+    background:url(../images/ico-arrow2.svg) no-repeat;
+}
+.path_box ul li span{display: inline-block;}
+
+/* 섹션 상단 타이틀 */
+.tit_box{text-align: center;}
+.tit_box h2{font-size: var(--main-title-size)}
+.tit_box p{font-size: 20px; font-weight: 300;  margin-top: var(--title-bottom);}
+
+/**************************************************************************** 
+헤더영역
+*****************************************************************************/
+#header{
+    position: fixed; width:100%; z-index:9999;
+    left:0; top:0; 
+    box-shadow: 0 4px 4px -4px rgba(0,0,0,0.25);
+    /* box-shadow: 1px 2px 8px rgb(0 0 0 / 18%); */
+    height:var(--header-height); 
+    background: rgba(255,255,255,0.9); 
+    backdrop-filter: blur(10px); /* 배경 블러효과 */
+}
+
+#header .gnb_bg{
+    position: absolute;
+    left: 0; top:var(--header-height); 
+    width: 100%;
+    height: 0;
+    transition:all 0.3s;
+    background: #fff;
+}
+
+#header.on .gnb_bg{height: 460px;}
+
+#header .header_inner{
+    width:var(--inner-width); 
+    height:var(--header-height);
+    margin: 0 auto;
+    position: relative;
+ }
+
+/* 로고 */
+#header .header_inner .logo{
+    position: absolute; 
+    left: 80px; top:50%; transform:translateY(-50%);
+}
+
+#header h1 img{width:75px;}
+
+/* 메뉴 */
+#header nav{    
+    position: absolute; left:50%; top:50%; 
+    transform:translate(-50%,-50%); 
+    width:950px;  
+    z-index:2; 
+}
+
+#header nav #gnb{}
+#header nav #gnb::after{content:""; display: block; clear: both;}
+#header nav #gnb > li{
+    float: left; width:190px; position: relative; 
+    box-sizing: border-box;
+}
+
+/* 메뉴별 배경 */
+#header nav #gnb > li.on::after{
+    content: "";
+    position: absolute;
+    left: 0; top: -47px;
+    background: var(--point-color);
+    width: 100%;
+    height: 630px;
+}
+
+/* 1차 메뉴 */
+#header nav #gnb > li > .depth1{
+    display: block; font-size: 22px; font-weight: 500; padding:20px 0;
+    text-align: center;
+    position: relative;
+    z-index:10;
+}
+
+/* 2차 메뉴 */
+#header nav #gnb > li .depth2{  
+    position: absolute;
+    left: 0; 
+    top: 73px; /* depth1 height */   
+    width:100%;
+    padding-top:30px;
+    padding-bottom:30px;
+    display: none;
+    z-index:10;
+}
+
+/* on일 때 depth2 보이기 */
+#header nav #gnb > li.on .depth2{
+    display: block;
+}
+
+/* on일 때 하단 라인 보이기 */
+#header nav #gnb > li.on > .depth2::after{
+    content:"";
+    display: block;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);    
+    width: 100px;
+    height:1px;
+    background: #000;
+}
+/* 2차 메뉴 아이템 */
+#header nav #gnb > li > .depth2 li{margin-top: 20px;}
+#header nav #gnb > li > .depth2 li a{    
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    padding:10px; /* 높이 설정 다른방법 line-height: 47px; */      
+}
+
+#header nav #gnb > li > .depth2 li:hover a{
+    font-weight:600;
+}
+
+#header .util{position: absolute; right: 80px; top: 10px;}
+#header .util a + a{margin-left: 20px;}
+
+/* 프랜차이즈 */
+.franchise_info{
+    position: fixed; 
+    right: 30px; bottom:80px;
+    width: 180px;
+    height:180px;
+    border-radius: 90px;    
+    background: var(--main-brown-color);
+    z-index:10000;
+    padding-top:40px;
+    box-sizing: border-box;   
+    text-align: center; 
+}
+
+.franchise_info em{display: block; color:#FFC424; font-size: 20ox; text-align: center;}
+
+/* 아이콘  */
+.franchise_info i{
+    display: inline-block;   
+    width: 32px;
+    height:32px;
+    background: url(../images/icon-tel.png) no-repeat center;
+    background-size: 32px auto;
+    margin-top: 6px;
+}
+
+.franchise_info strong{
+    display: block;
+    font-size: 20px;      
+    font-weight: 700;
+    color:#FFC424;   
+    margin-top: 6px; 
+    letter-spacing: -0.1em; 
+}
+
+
+/****************************************************************************  
+푸터영역
+ *****************************************************************************/
+ #footer{background: var(--gray6-color);  color:#fff; margin-top: var(--section-top-margin);}
+
+ .footer_inner{
+    /* max-width:var(--inner-width);  */
+    width:var(--inner-width);       
+    margin: 0 auto;
+    padding:90px 195px;
+    box-sizing: border-box;
+ }
+
+ #footer .footer_top{overflow: hidden; padding-bottom:43px;}
+ #footer .footer_top .col_lft{float: left;}
+ #footer .footer_top .col_lft ul{margin-top: 48px;}
+ #footer .footer_top .col_lft ul li a{color:#fff; font-size: 24px; line-height: 170%;}
+
+ #footer .footer_top .col_ctr{float: left; margin-left: 195px; padding-top:60px;}
+ #footer .footer_top .col_ctr .title{margin-top:25px; margin-bottom: 5px;}
+ #footer .footer_top .col_ctr .tel{font-size: 30px;}
+ #footer .footer_top .col_rgt{float: right; padding-top:60px;}
+ #footer .footer_top .col_rgt a{
+    display: inline-block; width:32px; height:32px;
+    background:url(../images/sns-icon.svg) no-repeat;
+    text-indent:-9999px;
+    margin-left: 20px;
+}
+
+#footer .footer_top .col_rgt a:nth-child(2){
+    background-position-x: -52px;
+}
+
+#footer .footer_top .col_rgt a:nth-child(3){
+    background-position-x: -104px;
+}
+
+#footer .footer_bottom{color:#fff; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 80px;}
+#footer .footer_bottom .foot_link a{color:#fff; }
+#footer .footer_bottom .foot_info{margin-top: 30px;}
+#footer .footer_bottom .copyright{margin-top: 30px;}
+
+ @media all and (max-width:1700px){
+    #header .franchise_info{display: none;}
+ }

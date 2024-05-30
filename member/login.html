@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행복은간장밥</title>
+    <link rel="icon" type="image/png" href="../resource/images/favicon.png">
+    <script src="../resource/js/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/member.css">
+
+    <script src="../resource/js/script.js"></script>
+</head>
+<body>
+   <!-- 헤더 -->
+   <?php include '../header.php';?>
+   <!--헤더 끝-->
+    
+    <!-- 컨텐츠 -->
+    <div class="container">
+        <!-- page location -->
+        <div class="path_box">
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <img src="../resource/images/ico-home.svg" alt="홈">
+                    </a>
+                </li>
+                <li>
+                    <span>로그인</span>
+                </li>
+            </ul>
+        </div>
+
+        <div id="login_wrap">
+            <div class="tit_box">
+                <h2>로그인</h2>
+                <p>회원 아이디와 비밀번호로 로그인하세요.</p>
+            </div>
+
+            <form action="join_step1.html" method="" name="loginForm" id="loginForm">
+                <fieldset>
+                    <legend class="hidden">회원로그인</legend>
+                    <div class="form_box">
+                        <!-- 아이디 -->
+                        <div class="inp_row row">
+                            <span class="inp_txt"> 
+                                <input type="text" id="userId" placeholder="아이디 입력(이메일 형식으로 입력)" value="abcd@naver.com">
+                            </span>
+                            <p class="err_msg">아이디를 입력하세요</p>
+                        </div>
+
+                        <!-- 비밀번호 -->
+                        <div class="inp_row row">
+                            <span class="inp_txt"> 
+                                <input type="password" id="userPw" placeholder="비밀번호 입력(4자이상, 영문, 숫자, 특수문자)" value="1234a!">
+                            </span>
+                            <p class="err_msg">비밀번호를 입력하세요</p>
+                        </div>
+
+                        <div class="chk_row row">
+                            <!-- 아이디 저장 -->
+                            <p class="check">
+                                <input type="checkbox" id="idSave">
+                                <label for="idSave">아이디 저장</label>
+                            </p>
+
+                             <!-- 아이디/비밀번호 찾기 -->
+                            <p class="find">
+                                <a href="#">아이디 찾기/비밀번호 찾기</a>  
+                            </p>
+                        </div>    
+
+                        <div class="btn_row row">
+                            <button type="submit" id="btn_submit" class="btn_login btn_filled">로그인</button>
+                            <a href="#" class="btn_join btn_outline" onclick="location.href='join_step1.html'">회원가입</a>
+                        </div>
+                    </div>
+                </fieldset>            
+            </form>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <?php include '../footer.php';?>
+    <!--푸터 끝-->
+</body>
+</html>

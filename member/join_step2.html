@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행복은간장밥</title>
+    <link rel="icon" type="image/png" href="../resource/images/favicon.png">
+    <script src="../resource/js/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/member.css">
+
+    <script src="../resource/js/script.js"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <?php include '../header.php';?>
+    <!--헤더 끝-->
+    
+    <!-- 컨텐츠 -->
+    <div class="container">
+        <!-- page location -->
+        <div class="path_box">
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <img src="../resource/images/ico-home.svg" alt="홈">
+                    </a>
+                </li>
+                <li>
+                    <span>회원가입</span>
+                </li>
+            </ul>
+        </div>
+
+        <div id="join_wrap">
+            <div class="tit_box">
+                <h2>회원가입</h2>
+                <p>행복은간장밥 회원으로 가입하시고, 특별한 멤버십 혜택을 만나보세요.</p>
+            </div>
+
+            <div class="step_box">
+                <ol>
+                    <li>약관동의</li>
+                    <li class="current">정보입력</li>
+                    <li>가입완료</li>
+                </ol>
+            </div>
+
+            <form action="" id="joinForm" class="step2">
+                <fieldset>
+                    <legend class="hidden">필수정보 입력폼</legend>
+                    <div class="form_box">
+                        <h3>필수정보입력</h3>
+                        <div class="inp_row">
+                            <label for="userEmail">아이디 입력</label>
+                            <p class="inp_txt"> 
+                                <input type="email" placeholder="이메일 형식으로 입력(abc@abc.com)" id="userEmail">    
+
+                                <button type="button" class="btn_chk">중복확인</button>
+                            </p>
+                            <p class="err_msg">에러 메세지</p>
+                        </div>
+
+                        <!-- 비밀번호 입력 -->
+                        <div class="inp_row">
+                            <label for="userPw">비밀번호 입력</label>
+                            <p class="inp_txt"> 
+                                <input type="password" placeholder="비밀번호 입력(4자이상, 영문, 숫자, 특수문자 조합)" id="userPw">
+                                <button type="button" class="btn_pwview">
+                                    <!-- <i class="fa-regular fa-eye"></i> -->
+                                    <i class="xi-eye"></i>    
+                                </button>
+                            </p>  
+                            <p class="err_msg">에러 메세지</p>
+                        </div>
+
+                        <!-- 비밀번호 확인 -->
+                        <div class="inp_row">
+                            <label for="userPwRe">비밀번호 확인</label>
+                            <p class="inp_txt"> 
+                                <input type="password" placeholder="비밀번호 입력 확인" id="userPwRe">
+                                <button type="button" class="btn_pwview">
+                                    <i class="xi-eye"></i> 
+                                </button>
+                            </p>                            
+                            <p class="err_msg">에러 메세지</p>
+                        </div>
+                        <div class="inp_row">
+                            <label for="userTel">핸드폰 번호</label>
+                            <p class="inp_txt"> 
+                                <input type="tel" placeholder="휴대폰 번호 입력(하이픈’-’ 없이 입력)" id="userTel">
+                            </p>                            
+                            <p class="err_msg">에러 메세지</p>
+                        </div>
+                    </div>                        
+                </fieldset>
+
+                <fieldset>
+                    <legend class="hidden">부가정보 입력폼</legend>
+                    <div class="form_box">
+                        <h3>부가정보입력</h3>
+                        <p class="txt">행복은간장밥 소식, 이벤트 당첨결과 등을 받아보실 수 있습니다.</p>
+
+                        <!-- 수신여부 체크  -->
+                        <div class="radio_row">
+                            <span>이메일 수신 여부</span>
+                            <p>
+                               <input type="radio" id="mailing_n" name="mailing" class="mailing">
+                               <label for="mailing_n">수신안함</label>
+    
+                               <input type="radio" id="mailing_y" name="mailing" class="mailing">
+                               <label for="mailing_y">수신함</label>
+                            </p>
+                        </div>
+
+                        <div class="btn_row row">
+                            <button type="reset" class="btn_cancel btn_outline">취소</button>
+
+                            <button type="button" class="btn_next btn_filled" onclick="step2InputCheck()">다음단계</button>
+                        </div>
+                    </div>                        
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <?php include '../footer.php';?>
+    <!--푸터 끝-->
+
+    <script>
+        // 다음단계 클릭 시 이메일 수신여부 체크 
+        function step2InputCheck(){
+            //이메일 수신여부
+            if($('#joinForm .mailing:checked').length<1){
+                alert('이메일 수신여부에 체크해 주세요');
+                return false;
+            }
+
+            location.href='join_step3.html';
+        }
+    </script>
+</body>
+</html>

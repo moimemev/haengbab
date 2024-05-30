@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행복은간장밥</title>
+    <link rel="icon" type="image/png" href="../resource/images/favicon.png">
+    <script src="../resource/js/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/member.css">
+
+    <script src="../resource/js/script.js"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <?php include '../header.php';?>
+    <!--헤더 끝-->
+    
+    <!-- 컨텐츠 -->
+    <div class="container">
+        <!-- page location -->
+        <div class="path_box">
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <img src="../resource/images/ico-home.svg" alt="홈">
+                    </a>
+                </li>
+                <li>
+                    <span>회원가입</span>
+                </li>
+            </ul>
+        </div>
+
+        <div id="join_wrap">
+            <div class="tit_box">
+                <h2>회원가입</h2>
+                <p>행복은간장밥 회원으로 가입하시고, 특별한 멤버십 혜택을 만나보세요.</p>
+            </div>
+
+            <div class="step_box">
+                <ol>
+                    <li>약관동의</li>
+                    <li>정보입력</li>
+                    <li class="current">가입완료</li>
+                </ol>
+            </div>
+
+            <div class="content_box">
+                <p class="tit"><strong>회원가입 완료</strong></p>
+                <p class="ico_box"><img src="../resource/images/ico-join-finish.png" alt=""></p>
+
+                <div class="txt_box">
+                    <p><strong>홍길동님의 회원가입이 성공적으로 완료되었습니다.</strong></p>
+                    <p>회원가입 내역 확인 및 수정은 <em>마이페이지 > 회원정보수정</em>에서 가능합니다.</p>
+                </div>
+
+                <div class="btn_row row">
+                    <button type="button" class="btn_outline w40pct" onclick="location.href='../index.html'">메인페이지로 이동</button>
+                    <button type="button" class="btn_filled w40pct" onclick="location.href='login.html'">로그인 바로하기</button>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <?php include '../footer.php';?>
+    <!--푸터 끝-->
+</body>
+</html>
